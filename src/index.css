@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons"
+);
+body {
+  background-color: rgb(200, 239, 239);
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+#box {
+  width: 80%;
+  margin: auto;
+  margin-top: 45vh;
+  transform: translateY(-50%);
+  background-color: rgba(55, 55, 55, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+}
+#titles {
+  display: flex;
+  justify-content: space-around;
+}
+
+#container {
+  display: flex;
+  justify-content: space-around;
+}
+.button {
+  width: 50px;
+  border-radius: 10px;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background-color: rgb(134, 118, 239);
+  box-shadow: 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+  cursor: pointer;
+}
+.button:focus {
+  border: none;
+  outline: none;
+}
+.button:active {
+  box-shadow: inset 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+}
+.controls {
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  margin: 10px;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  color: white;
+  background-color: rgb(134, 118, 239);
+  box-shadow: 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+  cursor: pointer;
+}
+.controls:focus {
+  border: none;
+  outline: none;
+}
+.controls:active {
+  box-shadow: inset 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+}
