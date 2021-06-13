@@ -37,7 +37,7 @@ class App extends React.Component {
   }
   decr() {
     if (this.props.minutesLeft === 0 && this.props.secondesLeft === 0) {
-      /* let sound = */ document.getElementById("beep").play();//new Audio('./schoolRing.mp3')
+      document.getElementById("beep").play();
       this.decrementSessionOrBreak();
     } else {
       this.props.decrementTime();
@@ -51,7 +51,7 @@ class App extends React.Component {
       this.setTimerOffColor();
       //repasser onOff en false
     } else {
-      countDown = setInterval(this.decr, 10);
+      countDown = setInterval(this.decr, 1000);
       this.setTimerOncolor();
     }
   }

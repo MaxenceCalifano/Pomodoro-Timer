@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 
 const initialState = {
   breakLength: 5,
-  sessionLength: 5,
-  minutesLeft: 5,
+  sessionLength: 25,
+  minutesLeft: 25,
   secondesLeft: 0,
   onOff: false,
   currentTimer: "Session"
