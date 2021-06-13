@@ -37,8 +37,7 @@ class App extends React.Component {
   }
   decr() {
     if (this.props.minutesLeft === 0 && this.props.secondesLeft === 0) {
-      let sound = document.getElementById("beep");
-      sound.play();
+      /* let sound = */ document.getElementById("beep").play();//new Audio('./schoolRing.mp3')
       this.decrementSessionOrBreak();
     } else {
       this.props.decrementTime();
@@ -50,16 +49,18 @@ class App extends React.Component {
     if (this.props.onOff) {
       clearInterval(countDown);
       this.setTimerOffColor();
+      //repasser onOff en false
     } else {
-      countDown = setInterval(this.decr, 1000);
+      countDown = setInterval(this.decr, 10);
       this.setTimerOncolor();
     }
   }
   reset() {
-    this.props.reset();
     if (this.props.onOff) {
       this.startStop();
     }
+    this.props.reset();
+    
     let sound = document.getElementById("beep");
     sound.pause();
     this.resetBkgColor();
@@ -140,15 +141,13 @@ class App extends React.Component {
               id="reset"
               timerControl={this.reset}
               controlName={<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><g><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/><rect fill="none" height="24" width="24"/></g><g><g/><path d="M12,5V1L7,6l5,5V7c3.31,0,6,2.69,6,6s-2.69,6-6,6s-6-2.69-6-6H4c0,4.42,3.58,8,8,8s8-3.58,8-8S16.42,5,12,5z"/></g></svg>}
-              /*<FontAwesomeIcon
-                icon={faUndoAlt}
-                style={{ fontSize: "large" }}
-              />*/
             />
           </div>
-          <audio
+         <audio
             id="beep"
-            src="https://actions.google.com/sounds/v1/human_voices/human_fart.ogg"
+           src='http://old.minford.k12.oh.us/WebsiteGraphics/backgrounds/GraphicsFromDriveR/sounds/SoundEffects/GONG.WAV'
+           type="audio/mpeg"
+           preload="auto"
           />
         </div>
       </div>
