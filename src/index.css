@@ -54,7 +54,7 @@ body {
   font-family: "Ubuntu", sans-serif;
   color: white;
   background-color: rgb(134, 118, 239);
-  box-shadow: 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+  /* box-shadow: 2px 2px 3px 0px rgba(29, 25, 52, 0.6); */
   cursor: pointer;
 }
 .controls:focus {
@@ -63,4 +63,42 @@ body {
 }
 .controls:active {
   box-shadow: inset 2px 2px 3px 0px rgba(29, 25, 52, 0.6);
+}
+
+/* #reset:hover {
+  animation-duration: 1s;
+  animation-name: rotation;
+}*/
+.controls_start_stop:hover {
+  animation-duration: 1s;
+  animation-name: bounce;
+} 
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(180deg);
+
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-5px);
+  }
+  15% {
+    transform: translateY(30px);
+  }
+  40% {
+    transform: translateY(-1px);
+  }
+  65% {
+    transform: translateY(180px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }

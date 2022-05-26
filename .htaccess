@@ -1,0 +1,5 @@
+# Server can play audio
+# MP3 audio
+AddType audio/mpeg3 .mp3
+AddType audio/mp3 .mp3
+AddType audio/x-mpeg3 .mp3
